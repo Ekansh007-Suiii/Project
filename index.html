@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Portugal Adventure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #3498db, #8e44ad, #e74c3c);
+            animation: gradientBG 10s ease infinite;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: white;
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(5deg); }
+            40% { transform: skew(-5deg); }
+            60% { transform: skew(5deg); }
+            80% { transform: skew(-5deg); }
+            100% { transform: skew(0deg); }
+        }
+
+        @keyframes gradientBG {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section-1 {
+            background: #333;
+            margin-bottom: 20px;
+        }
+
+        .places {
+            padding: 20px;
+            background-color: #222;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .places h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff7e5f;
+        }
+
+        .places p {
+            font-size: 1.2rem;
+        }
+
+        .section-2 {
+            background: #1abc9c;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: #ff6347;
+            margin: 20px 0;
+        }
+
+        .book-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff6347;
+            color: white;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .book-button:hover {
+            background-color: #ff5230;
+            transform: scale(1.05);
+        }
+
+        .review-section {
+            padding: 40px 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .review-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            margin-bottom: 20px;
+        }
+
+        .review p {
+            font-size: 1.1rem;
+        }
+
+        .review-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .review-form button {
+            padding: 10px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Epic Portugal Adventure</h1>
+    </header>
+
+    <div class="container">
+        <section class="section-1">
+            <h2>Tour Highlights & Accommodation</h2>
+            <div class="places">
+                <h3>Day 1-2: Lisbon</h3>
+                <p>Stay at Hotel Avenida Palace, explore Alfama district and Belem Tower.</p>
+            </div>
+            <div class="places">
+                <h3>Day 3-4: Porto</h3>
+                <p>Stay at Ribeira do Porto Hotel, famous for its wine cellars and river views.</p>
+            </div>
+            <div class="places">
+                <h3>Day 5: Douro Valley</h3>
+                <p>Stay at Quinta Nova Winery House, relax among the vineyards.</p>
+            </div>
+            <div class="places">
+                <h3>Day 6-7: Sintra</h3>
+                <p>Stay at Tivoli Palacio de Seteais, visit Pena Palace and Moorish Castle.</p>
+            </div>
+        </section>
+
+        <section class="section-2">
+            <h2>Transportation</h2>
+            <p><strong>Flight:</strong> Round-trip international flight from India to Portugal.</p>
+            <p><strong>Private Car:</strong> Dedicated car service for transfers between destinations.</p>
+            <p><strong>Train:</strong> Scenic train ride from Porto to Douro Valley along the river.</p>
+        </section>
+
+        <div class="review-section">
+            <h2>Reviews</h2>
+            <div id="reviews">
+                <div class="review">
+                    <p><strong>Siddhant:</strong> This trip was beyond amazing, highly recommend!</p>
+                </div>
+                <div class="review">
+                    <p><strong>Sajal:</strong> Breathtaking views and fantastic service throughout the journey.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Rajveer:</strong> Best trip of my life! Worth every penny.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Kiaan:</strong> Portugal is magical, and this tour was perfect to experience it.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Daksh:</strong> Unforgettable experience! The hotels were luxurious.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Jash:</strong> Smooth rides and excellent food. 5-star experience!</p>
+                </div>
+            </div>
+
+            <div class="review-form">
+                <textarea id="newReview" placeholder="Write your review here..."></textarea>
+                <button onclick="addReview()">Submit Review</button>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <h2>Book Now</h2>
+            <p class="price">₹1,35,000 per person</p>
+            <button class="book-button" onclick="showMessage()">Book This Adventure</button>
+            <p>&copy; 2024 Epic Trips. All rights reserved.</p>
+            <p>Email: <a href="mailto:ekanshpatil007@gmail.com" style="color: #ff6347;">ekanshpatil007@gmail.com</a></p>
+            <p>Contact: 9372120467</p>
+            <p>Made by Ekansh</p>
+        </footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Just a dummy button 😁");
+        }
+
+        function addReview() {
+            var newReview = document.getElementById("newReview").value;
+            if (newReview.trim() !== "") {
+                var reviewSection = document.getElementById("reviews");
+                var newReviewElement = document.createElement("div");
+                newReviewElement.classList.add("review");
+                newReviewElement.innerHTML = <p><strong>You:</strong> ${newReview}</p>;
+                reviewSection.appendChild(newReviewElement);
+                document.getElementById("newReview").value = ""; // Clear input
+            }
+        }
+    </script>
+
+</body>
+</html>
